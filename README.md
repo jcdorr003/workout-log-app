@@ -3,7 +3,7 @@
 
 ## Project Description
 
-Workout log application using React.js and Rails. My goal is to create an application that is similar to a note taking app, but specializing in logging workouts, and allows the user to see their workout schedule as well as create, update, and delete workouts/ exercises.
+Workout log application using React.js and Rails. My goal is to create an application that is similar to a note taking app, but specializing in logging workouts, and allows the user to see their workout schedule as well as create, update, and delete workouts/ exercises. 
 
 ## CRUD 
 - Create workouts and exercises
@@ -52,6 +52,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Header | This will render the header include the nav | 
 | Footer | This will render the header include the nav | 
 | Home | This will render the users workout for the day |
+| LoginRegister | This will render the login/ register page |
 | Today | This will render the details of the workout for the day and allow the user to input their exercise data|
 | Past | This will render the previous weeks workouts |
 | New | This will render a form to input a workout and exercises into the users schedule |
@@ -70,7 +71,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 |Wednesday | Finish up functionality and start styling |
 |Thursday | Styling |
 | Friday | Have all functionality completed and most of the styling finished |
-| Weekend | Implement any small last minute changes |
+| Weekend 2 | Implement any small last minute changes |
 
 
 
