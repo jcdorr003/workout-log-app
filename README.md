@@ -31,11 +31,12 @@ Will be creating an API with workout and exercise data
 #### MVP
 - Create database with users, workouts, and exercises
 - Build back-end with rails 
-- Render workouts and exercises based on a weekly schedule
+- Implement CRUD for workouts and exercises. (See CRUD in previous section.)
+- Render all components with React to have simple UX for the user
 
-#### PostMVP EXAMPLE
+#### PostMVP
 
-- Connect to calender app
+- Convert to React Native
 
 ## React Component Hierarchy
 
