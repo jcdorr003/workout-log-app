@@ -3,7 +3,7 @@
 
 ## Project Description
 
-Workout log application using React.js and Rails. My goal is to create an application that is similar to a note taking app, but specializing in logging workout and allows the user to see their workout schedule.
+Workout log application using React.js and Rails. My goal is to create an application that is similar to a note taking app, but specializing in logging workouts, and allows the user to see their workout schedule as well as create, update, and delete workouts/ exercises.
 
 ## CRUD 
 - Create workouts and exercises
@@ -18,9 +18,10 @@ Workout log application using React.js and Rails. My goal is to create an applic
 
 ## Wireframes
 
-![wireframe1](https://res.cloudinary.com/jcdorr003/image/upload/v1570198265/IMG_0151_yprxtz.heic)
-![wireframe2](https://res.cloudinary.com/jcdorr003/image/upload/v1570198266/IMG_0152_p8fkje.heic)
-![ERD](https://res.cloudinary.com/jcdorr003/image/upload/v1570198265/IMG_0153_usapts.heic)
+![wireframe1](https://res.cloudinary.com/jcdorr003/image/upload/v1570203334/Image_from_iOS_mxpiem.jpg)
+![wireframe2](https://res.cloudinary.com/jcdorr003/image/upload/v1570203334/Image_from_iOS_1_vldqqj.jpg)
+![ERD](https://res.cloudinary.com/jcdorr003/image/upload/v1570203334/Image_from_iOS_2_t8htz8.jpg)
+![ReactArch](https://res.cloudinary.com/jcdorr003/image/upload/v1570203334/Image_from_iOS_3_aininj.jpg)
 
 ## API
 
