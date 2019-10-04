@@ -5,6 +5,12 @@
 
 Workout log application using React.js and Rails. My goal is to create an application that is similar to a note taking app, but specializing in logging workout and allows the user to see their workout schedule.
 
+## CRUD 
+- Create workouts and exercises
+- Show workout and exercises for the day as well as the week
+- Update workout and exercises
+- Delete a workout/ exercise
+
 ## Project Links
 
 - [github repo](https://github.com/jcdorr003/workout-log-app.git)
@@ -48,19 +54,19 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Today | This will render the details of the workout for the day and allow the user to input their exercise data|
 | Past | This will render the previous weeks workouts |
 | New | This will render a form to input a workout and exercises into the users schedule |
-| Scheduel | This will render the users workouts for the week |
+| Schedule | This will render the users workouts for the week |
 
 ## Timeline Summary
  My goal for completion is Thursday night on the 10th of October. This way if there are any small last minute changes that need to be made, I will have a couple days to implement them. I have a simple wireframe and ERD drawn out but plan on spending the first two days perfecting those as well as setting up the database. By Monday morning I would like to have the database completely set up. Then I can work on the controller, routes, and api-helper monday. By Tuesday I would like to be working on the front-end. I will spend most of the day Tuesday working on React, setting up the front-end functionality of this app. If I can finish most of that tuesday that will allow me to spend Wednesday and Thursday on styling.
 
 ## Timeline
-Weekend: Build database and set up basic layout of the application in rails and react
-Monday: Complete controller and routes
-Tuesday: Connect Rails to React/ API-Helper
-Wednesday: Finish up functionality and start styling
-Thursday: Styling
-Friday. Have all functionality completed and most of the styling finished
-Weekend: Implement any small last minute changes
+| Weekend 1 | Build database and set up basic layout of the application in rails and react |
+| Monday | Complete controller and routes |
+|Tuesday | Connect Rails to React/ API-Helper |
+|Wednesday | Finish up functionality and start styling |
+|Thursday | Styling |
+| Friday | Have all functionality completed and most of the styling finished |
+| Weekend | Implement any small last minute changes |
 
 
 
