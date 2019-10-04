@@ -12,9 +12,9 @@ Workout log application using React.js and Rails. My goal is to create an applic
 
 ## Wireframes
 
-https://res.cloudinary.com/jcdorr003/image/upload/v1570198265/IMG_0151_yprxtz.heic
-https://res.cloudinary.com/jcdorr003/image/upload/v1570198266/IMG_0152_p8fkje.heic
-https://res.cloudinary.com/jcdorr003/image/upload/v1570198265/IMG_0153_usapts.heic
+![wireframe1](https://res.cloudinary.com/jcdorr003/image/upload/v1570198265/IMG_0151_yprxtz.heic)
+![wireframe2](https://res.cloudinary.com/jcdorr003/image/upload/v1570198266/IMG_0152_p8fkje.heic)
+![ERD](https://res.cloudinary.com/jcdorr003/image/upload/v1570198265/IMG_0153_usapts.heic)
 
 ## API
 
