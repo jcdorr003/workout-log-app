@@ -60,6 +60,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
  My goal for completion is Thursday night on the 10th of October. This way if there are any small last minute changes that need to be made, I will have a couple days to implement them. I have a simple wireframe and ERD drawn out but plan on spending the first two days perfecting those as well as setting up the database. By Monday morning I would like to have the database completely set up. Then I can work on the controller, routes, and api-helper monday. By Tuesday I would like to be working on the front-end. I will spend most of the day Tuesday working on React, setting up the front-end functionality of this app. If I can finish most of that tuesday that will allow me to spend Wednesday and Thursday on styling.
 
 ## Timeline
+| --- | :---: |
 | Weekend 1 | Build database and set up basic layout of the application in rails and react |
 | Monday | Complete controller and routes |
 |Tuesday | Connect Rails to React/ API-Helper |
