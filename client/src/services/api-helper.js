@@ -1,6 +1,6 @@
 const axios = require('axios');
 const api = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'http://weight-list-rails.herokuapp.com'
 });
 
 export const loginUser = async (loginData) => {
