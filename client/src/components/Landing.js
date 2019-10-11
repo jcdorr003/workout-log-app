@@ -1,7 +1,9 @@
 import React from 'react';
+import '../css/Landing.css';
 import { Link } from 'react-router-dom';
 
 const Landing = (props) => {
+  console.log("Landing Page")
   return (
     <div className='landing-container'>
           {props.currentUser
@@ -13,10 +15,6 @@ const Landing = (props) => {
                   <h3>Hi, {props.currentUser && props.currentUser.username}<button onClick={props.handleLogout}>Logout</button></h3>
                 </div>
                 <Link to='/workouts'>Workouts</Link>
-                {/* <Link to="/food">View All Food</Link>
-                &nbsp;
-                <Link to="/flavors">View All Flavors</Link>
-                <hr /> */}
               </div>
               :
               <div>

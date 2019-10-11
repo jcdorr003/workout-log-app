@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Workouts.css';
 import { Redirect } from 'react-router-dom';
 
 class Workouts extends React.Component {
@@ -24,7 +25,7 @@ class Workouts extends React.Component {
 
     let workout = this.state.clicked ? <Redirect to={`/workouts/${this.state.workout.id}`}/> : null
   return (
-    <div>
+    <div className='workouts-container'>
       {workoutNames}
       {workout}
     </div>

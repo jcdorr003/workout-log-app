@@ -3,7 +3,8 @@ import { loginUser } from '../services/api-helper';
 
 class SingleWorkout extends Component {
   state = {
-
+    isAdd: false,
+    isEdit: false
   }
 
   componentDidMount() {

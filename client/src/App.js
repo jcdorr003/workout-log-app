@@ -68,6 +68,7 @@ class App extends React.Component {
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.authFormData);
     this.setState({ currentUser });
+    this.props.history.push("/")
   }
 
   // Function to register a user
