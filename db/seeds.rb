@@ -15,8 +15,22 @@ leg_ext = Exercise.create!( name: 'Leg Extensions')
 leg_curls = Exercise.create!( name: 'Leg Curls')
 lunges = Exercise.create!( name: 'Lunges')
 calf_raise = Exercise.create!( name: 'Calf Raise')
+bench_press = Exercise.create!( name: 'Bench Press')
+db_incline_bench_press = Exercise.create!( name: 'DB Incline Bench Press')
+standing_shoulder_press = Exercise.create!( name: 'Standing Shoulder Press')
+lat_raise = Exercise.create!( name: 'Lat Raise')
+skullcrushers = Exercise.create!( name: 'Skullcrushers')
+triceps_pressdown = Exercise.create!( name: 'Triceps Pressdown')
+deadlifts = Exercise.create!( name: 'Deadlifts')
+cable_rows = Exercise.create!( name: 'Cable Rows')
+pull_ups = Exercise.create!( name: 'Pull Ups')
+shrugs = Exercise.create!( name: 'Shrugs')
+preacher_curls = Exercise.create!( name: 'Preacher Curls')
+incline_db_curls = Exercise.create!( name: 'Incline DB Curls')
 
 legs = Workout.create!( name: 'Legs', user: user)
+push = Workout.create!( name: 'Push', user: user)
+pull = Workout.create!( name: 'Pull', user: user)
 
 Routine.create!([
     {exercise: squats, workout: legs},
@@ -25,4 +39,16 @@ Routine.create!([
     {exercise: leg_curls, workout: legs},
     {exercise: lunges, workout: legs},
     {exercise: calf_raise, workout: legs},
+    {exercise: bench_press, workout: push},
+    {exercise: db_incline_bench_press, workout: push},
+    {exercise: standing_shoulder_press, workout: push},
+    {exercise: lat_raise, workout: push},
+    {exercise: skullcrushers, workout: push},
+    {exercise: triceps_pressdown, workout: push},
+    {exercise: deadlifts, workout: pull},
+    {exercise: cable_rows, workout: pull},
+    {exercise: pull_ups, workout: pull},
+    {exercise: shrugs, workout: pull},
+    {exercise: preacher_curls, workout: pull},
+    {exercise: incline_db_curls, workout: pull},
 ])

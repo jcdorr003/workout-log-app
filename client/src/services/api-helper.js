@@ -56,7 +56,7 @@ export const destroyWorkout = async (id) => {
   return resp.data;
 }
 
-export const putWorkoutExercise = async (food_id, id) => {
+export const putWorkoutExercise = async (workout_id, id) => {
   const resp = await api.put(`/workouts/${workout_id}/exercises/${id}`, null, { headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` } })
   return resp.data
 }
