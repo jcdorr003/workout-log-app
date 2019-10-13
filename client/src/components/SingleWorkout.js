@@ -13,6 +13,10 @@ class SingleWorkout extends Component {
     this.props.getWorkout(workoutsId)
   }
 
+   deleteExercise = () => {
+
+  }
+
 
   render() {
     console.log("this is props", this.props.workout && this.props.workout.routines)

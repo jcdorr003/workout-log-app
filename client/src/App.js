@@ -28,6 +28,9 @@ class App extends React.Component {
       currentUser: null,
       workouts: [],
       workout: null,
+      formData: {
+        name:""
+      },
       clicked:false,
       authFormData: {
         username: "",
@@ -63,6 +66,52 @@ class App extends React.Component {
     this.setState({ workout })
   }
 
+  addWorkout = async () => {
+    const newWorkout = await postWorkout(this.state.formData)
+    this.setState(prevState => ({
+      workouts: [...prevState.workout, newWorkout],
+      formData: {
+        name: ""
+      }
+    }))
+  }
+
+  // Function to update an existing food in our API
+  // We find the index of the updated food in state
+  // We build a new array, replacing the old food item with the new one
+  // Then we setState with the new food array
+  updateWorkout = async (workout) => {
+    const updatedWorkout = await putWorkout(this.state.formData, workout.id);
+    const index = this.state.workouts.indexOf(workout);
+    const workoutsArray = this.state.workouts
+    workoutsArray[index] = updatedWorkout
+    this.setState({
+      workouts: workoutsArray
+    })
+  }
+
+  // Function to delete a single workout item
+  // We then build a new workouts array with the delete item spliced out
+  deleteWorkout = async (workout) => {
+    await destroyWorkout(workout.id);
+    const index = this.state.workouts.indexOf(workout);
+    const workoutsArray = this.state.workouts
+    console.log('this is workouts array', workoutsArray);
+    workoutsArray.splice(index, 1);
+    this.setState({
+      workouts: workoutsArray
+    })
+  }
+
+  // Function to set the form data for the update food form
+  setWorkoutForm = (workout) => {
+    this.setState({
+      formData: {
+        name: workout.name
+      }
+    })
+  }
+
   // Function to login a user
   // we set the user data in state and the JWT in local storage
   handleLogin = async () => {
@@ -89,6 +138,12 @@ class App extends React.Component {
     })
   }
 
+  // handle change function for our create food form
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ formData: { [name]: value } });
+  }
+
 
   // Handle change function for the auth forms
   authHandleChange = (e) => {
@@ -100,6 +155,8 @@ class App extends React.Component {
       }
     }));
   }
+
+
 
 
 
@@ -136,8 +193,13 @@ class App extends React.Component {
         <Route exact path="/workouts" render={(props) => (
           <Workouts
             workouts={this.state.workouts}
-            handleClick={this.handleClick}
-            clicked={this.state.clicked}
+            formData={this.state.formData}
+            getWorkout={this.getWorkout}
+            deleteWorkout={this.deleteWorkout}
+            handleSubmit={this.addWorkout}
+            handleChange={this.handleChange}
+            setWorkoutForm={this.setWorkoutForm}
+            updateWorkout={this.updateWorkout}
           />)} />
         <Route exact path="/workouts/:id" render={(props) => (
           <SingleWorkout {...props}
