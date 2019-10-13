@@ -27,6 +27,11 @@ export const verifyUser = async () => {
   return false
 }
 
+export const destroyUser = async (id) => {
+  const resp = await api.delete(`/users/${id}`, { headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` } });
+  return resp.data;
+}
+
 export const showWorkouts = async () => {
   const resp = await api.get(`/workouts`)
   return resp.data;
