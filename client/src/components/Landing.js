@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Landing.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const Landing = (props) => {
   console.log("Landing Page")
@@ -17,10 +17,7 @@ const Landing = (props) => {
                 <Link to='/workouts'>Workouts</Link>
               </div>
               :
-              <div>
-              <button onClick={props.handleLoginButton}>Login</button>
-              <button onClick={props.handleRegisterButton}>Register</button>
-              </div>
+              <Redirect to='/login'/>
             }
         </div>
   )

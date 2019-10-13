@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Login.css';
 
 const Login = (props) => {
@@ -16,6 +17,7 @@ const Login = (props) => {
         <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
         <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
         <button>Login</button>
+        <p>Dont have an account? Create one <Link to='/register'>HERE</Link></p>
       </form>
     </div>
   )
