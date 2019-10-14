@@ -13,10 +13,10 @@ const Login = (props) => {
   return (
     <div className='login-container'>
       <h2>Login</h2>
-      <form onSubmit={(e) => handleOnSubmit(e)} >
+      <form className='login-form' onSubmit={(e) => handleOnSubmit(e)} >
         <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
         <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
-        <button>Login</button>
+        <button id='login-button'>Login</button>
         <p>Dont have an account? Create one <Link to='/register'>HERE</Link></p>
       </form>
     </div>

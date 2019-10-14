@@ -1,4 +1,14 @@
 .footer-container {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 5vh;
+  background-color: #252a34;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container > p {
+  margin: 0;
+  color: #eaeaea;
 }

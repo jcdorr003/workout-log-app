@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Workouts.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Workouts extends React.Component {
   constructor(props) {
@@ -13,9 +13,19 @@ class Workouts extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='workouts-wrapper'>
+        {this.props.currentUser
+        ?
+        <div className='user-container'>
+          <h3>Hi, {this.props.currentUser && this.props.currentUser.username}</h3>
+          <button onClick={this.props.handleLogout}>LOGOUT</button>
+        </div>
+        :
+        <Redirect to='/login'/>
+        }
+        <div className='workouts-container'>
         {this.props.workouts.map(workout => (
-          <div key={workout.id}>
+          <div className='workout-cards' key={workout.id}>
             {/* Here is where we user a terinary for the edit form.
               If the isEdit in state is set to the current food id, then we show an edit form for just that item */}
             {this.state.isEdit === workout.id
@@ -39,8 +49,8 @@ class Workouts extends React.Component {
               :
               // When the isEdit does not equal the current food id, display the food info like normal
               // This inludes the food name inside a link, and edit button and delete button
-              <div>
-                <Link to={`/workouts/${workout.id}`} onClick={() => { this.props.getWorkout(workout.id) }}>{workout.name}</Link>
+              <div className='link-container'>
+                <Link id='workout-link' to={`/workouts/${workout.id}`} onClick={() => { this.props.getWorkout(workout.id) }}>{workout.name}</Link>
                 <button onClick={() => {
                   // the edit form data is preset using the setFoodForm function and the current foods data 
                   this.props.setWorkoutForm(workout);
@@ -48,14 +58,13 @@ class Workouts extends React.Component {
                   this.setState({
                     isEdit: workout.id
                   })
-                }}>edit</button>
-                <button onClick={() => { this.props.deleteWorkout(workout) }}>delete</button>
+                }}>EDIT</button>
+                <button onClick={() => { this.props.deleteWorkout(workout) }}>DELETE</button>
               </div>
             }
           </div>
         ))}
-        {/* incase you haven't seen it, <hr /> just makes an horizontle rule (or line) accross the page */}
-        <hr />
+        <div className='add-workout'>
         {this.state.isAdd // Same setup as before but since there will only ever be one add form, a simple true/false boolean will work
           ?
           // When the 'Add' button is clicked, a create food form is shown.
@@ -77,8 +86,10 @@ class Workouts extends React.Component {
           :
           <button onClick={() => {
             this.setState({ isAdd: true })
-          }}>Add</button>
+          }}>ADD</button>
         }
+        </div>
+        </div>
       </div>
     )
   }

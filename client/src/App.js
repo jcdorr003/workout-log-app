@@ -192,6 +192,8 @@ class App extends React.Component {
           />)} />
         <Route exact path="/workouts" render={(props) => (
           <Workouts
+            currentUser={this.state.currentUser}
+            handleLogout={this.handleLogout}
             workouts={this.state.workouts}
             formData={this.state.formData}
             getWorkout={this.getWorkout}

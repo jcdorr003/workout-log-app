@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { loginUser } from '../services/api-helper';
-
+import '../css/SingleWorkout.css'
 class SingleWorkout extends Component {
   state = {
     isAdd: false,
@@ -11,10 +10,6 @@ class SingleWorkout extends Component {
     console.log('im here', this.props)
     let workoutsId = this.props.match.params.id;
     this.props.getWorkout(workoutsId)
-  }
-
-   deleteExercise = () => {
-
   }
 
 
@@ -30,7 +25,7 @@ class SingleWorkout extends Component {
     })
 
     return (
-      <div>
+      <div className='routine-container'>
         {workoutData}
       </div>
     )

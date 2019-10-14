@@ -1,5 +1,4 @@
 .container {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +8,8 @@
 
 #logo {
   text-decoration: none;
-  color: #08d9d6;
+  color: #eaeaea;
 }
 
 
 
-.logout-container {
-
-}
