@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <div className='container'>
       <div className='logo-container'>
-        <Link id='logo' to="/"><h1>WeightList</h1></Link>
+        <Link id='logo' to="/"><h1>WEIGHTLIST</h1></Link>
       </div>
     </div>
   )

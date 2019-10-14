@@ -17,7 +17,7 @@ class Workouts extends React.Component {
         {this.props.currentUser
         ?
         <div className='user-container'>
-          <h3>Hi, {this.props.currentUser && this.props.currentUser.username}</h3>
+          <h3>Welcome, {this.props.currentUser && this.props.currentUser.username}!</h3>
           <button onClick={this.props.handleLogout}>LOGOUT</button>
         </div>
         :
@@ -51,6 +51,7 @@ class Workouts extends React.Component {
               // This inludes the food name inside a link, and edit button and delete button
               <div className='link-container'>
                 <Link id='workout-link' to={`/workouts/${workout.id}`} onClick={() => { this.props.getWorkout(workout.id) }}>{workout.name}</Link>
+                <React.Fragment>
                 <button onClick={() => {
                   // the edit form data is preset using the setFoodForm function and the current foods data 
                   this.props.setWorkoutForm(workout);
@@ -58,8 +59,8 @@ class Workouts extends React.Component {
                   this.setState({
                     isEdit: workout.id
                   })
-                }}>EDIT</button>
-                <button onClick={() => { this.props.deleteWorkout(workout) }}>DELETE</button>
+                }}>EDIT</button><button onClick={() => { this.props.deleteWorkout(workout) }}>DELETE</button>
+                </React.Fragment>
               </div>
             }
           </div>
@@ -69,7 +70,7 @@ class Workouts extends React.Component {
           ?
           // When the 'Add' button is clicked, a create food form is shown.
           // When the 'Submit' button is clicked, when ship the data to our API and reset the form back to a button
-          <div>
+          <div id='add-form'>
             <form onSubmit={(e) => {
               e.preventDefault();
               this.props.handleSubmit();
@@ -80,13 +81,13 @@ class Workouts extends React.Component {
                 type="text"
                 value={this.props.formData.name}
                 onChange={this.props.handleChange} />
-              <button>submit</button>
+              <button>SUBMIT</button>
             </form>
           </div>
           :
           <button onClick={() => {
             this.setState({ isAdd: true })
-          }}>ADD</button>
+          }}>+</button>
         }
         </div>
         </div>

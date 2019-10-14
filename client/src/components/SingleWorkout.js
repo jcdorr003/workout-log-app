@@ -17,8 +17,8 @@ class SingleWorkout extends Component {
     console.log("this is props", this.props.workout && this.props.workout.routines)
     let workoutData = this.props.workout !== null && this.props.workout.routines.map((d, i) => {
       return (
-      <div key={i}>
-        <p>{d.exercise.name}</p>
+      <div className='exercise-container' key={i}>
+        <p id='exercise-name'>{d.exercise.name}</p>
         <p>Weight: {d.weight} Sets: {d.sets} Reps: {d.reps}</p>
       </div>
       )
