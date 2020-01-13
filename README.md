@@ -64,10 +64,6 @@ My goal for completion is Thursday night on the 10th of October. This way if the
 
 Axios for api calls
 
-## Issues and Resolutions
-
-Use this section to list of all major issues encountered and their resolution.
-
 ## Wireframes
 
 ![wireframe1](https://res.cloudinary.com/jcdorr003/image/upload/v1570203334/Image_from_iOS_mxpiem.jpg)
