@@ -11,11 +11,6 @@ Workout log application using React.js and Rails. My goal is to create an applic
 - Update workout and exercises
 - Delete a workout/ exercise
 
-## Project Links
-
-- [github repo](https://github.com/jcdorr003/workout-log-app.git)
-- [deployment]()
-
 ## API
 
 Will be creating an API with workout, routines, and exercise data
