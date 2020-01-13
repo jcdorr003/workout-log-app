@@ -35,8 +35,7 @@ class WorkoutsController < ApplicationController
 
   # DELETE /workouts/1
   def destroy
-    @workout = Workout.find(params[:id])
-    @workout.routines.destroy
+    @workout.destroy
     render json: { message: 'workout deleted' }
   end
 
