@@ -1,0 +1,21 @@
+{
+  "name": "workout-log-app",
+  "version": "1.0.0",
+  "description": "Rails build package",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:jcdorr003/workout-log-app.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  },
+  "engines": {
+    "yarn": "1.17.3",
+    "npm": "6.11.3",
+    "node": "12.11.1"
+  }
+}

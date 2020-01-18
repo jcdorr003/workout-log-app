@@ -4,6 +4,13 @@
 
 Workout log application using React.js and Rails. My goal is to create an application that is similar to a note taking app, but specializing in logging workouts, and allows the user to see their workout schedule as well as create, update, and delete workouts/ exercises.
 
+## Local Startup Instructions
+
+1. clone git repo
+2. cd workout-log-app
+3. rails db:migrate && rails db:seed
+4. rails server
+
 ## CRUD
 
 - Create workouts and exercises
