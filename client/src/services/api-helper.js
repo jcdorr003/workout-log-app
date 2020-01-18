@@ -1,6 +1,7 @@
 const axios = require("axios");
+//const port = process.env.PORT || "3001";
 const api = axios.create({
-  baseURL: process.env.baseURL || "http://localhost:3001/"
+  baseURL: " "
 });
 
 export const loginUser = async loginData => {
